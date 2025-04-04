@@ -1,0 +1,138 @@
+import type { Customer, Product, Bill } from "./store"
+
+export const sampleCustomers: Customer[] = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john.doe@example.com",
+    phone: "9876543210",
+    address: "123 Main St, City",
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 2,
+    name: "Sarah Adams",
+    email: "sarah.adams@example.com",
+    phone: "8765432109",
+    address: "456 Oak Ave, Town",
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 3,
+    name: "Rahul Mehta",
+    email: "rahul.m@example.com",
+    phone: "7654321098",
+    address: "789 Pine Rd, Village",
+    createdAt: new Date().toISOString(),
+  },
+]
+
+export const sampleProducts: Product[] = [
+  {
+    id: 1,
+    name: "Smartphone",
+    price: 14999,
+    stock: 25,
+    category: "Electronics",
+    gst: 18,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 2,
+    name: "T-Shirt",
+    price: 599,
+    stock: 50,
+    category: "Clothing",
+    gst: 5,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 3,
+    name: "Coffee Maker",
+    price: 2499,
+    stock: 10,
+    category: "Home",
+    gst: 12,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 4,
+    name: "Laptop",
+    price: 45999,
+    stock: 8,
+    category: "Electronics",
+    gst: 18,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 5,
+    name: "Jeans",
+    price: 999,
+    stock: 30,
+    category: "Clothing",
+    gst: 5,
+    createdAt: new Date().toISOString(),
+  },
+]
+
+export const sampleBills: Bill[] = [
+  {
+    id: 1,
+    billNumber: "INV-001",
+    customerId: 1,
+    customerName: "John Doe",
+    items: [
+      {
+        id: 1,
+        productId: 1,
+        name: "Smartphone",
+        price: 14999,
+        quantity: 1,
+        gst: 18,
+      },
+    ],
+    subtotal: 14999,
+    gstAmount: 2699.82,
+    discount: 0,
+    discountAmount: 0,
+    total: 17698.82,
+    paymentMethod: "cash",
+    notes: "",
+    createdAt: new Date().toISOString(),
+    status: "paid",
+  },
+  {
+    id: 2,
+    billNumber: "INV-002",
+    customerId: 2,
+    customerName: "Sarah Adams",
+    items: [
+      {
+        id: 1,
+        productId: 2,
+        name: "T-Shirt",
+        price: 599,
+        quantity: 2,
+        gst: 5,
+      },
+      {
+        id: 2,
+        productId: 5,
+        name: "Jeans",
+        price: 999,
+        quantity: 1,
+        gst: 5,
+      },
+    ],
+    subtotal: 2197,
+    gstAmount: 109.85,
+    discount: 5,
+    discountAmount: 109.85,
+    total: 2197,
+    paymentMethod: "card",
+    notes: "",
+    createdAt: new Date().toISOString(),
+    status: "paid",
+  },
+]
+
